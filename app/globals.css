@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MAIN STYLE */
+
+body {
+  overflow-x: hidden;
+}
+main {
+  @apply mt-20;
+}
+/* TYPOGRAPHY STYLES */
+h1 {
+  @apply text-8xl font-medium;
+}
+
+h2 {
+  @apply text-5xl font-medium;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+p {
+  @apply text-lg;
+}
+
+small {
+  @apply text-xs font-bold tracking-widest;
+}
+
+.wrapper {
+  @apply container mx-auto px-5 lg:px-0;
+}
+
+.sp {
+  @apply py-20;
+}
+
+.eq {
+  transition: 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+/* LINK STYLES */
+.link-item {
+  @apply relative;
+}
+
+.link-item::after {
+  @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-orange content-[""];
+}
+
+.link-item:hover::after {
+  @apply w-full;
+}
+
+::selection {
+  background-color: #32b8cb;
+  color: #f0f9ff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: #ff7d5b;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff1f2;
+}
+
+/* SWIPER STYLES */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(192, 90, 59) !important;
+  fill: rgb(192, 90, 59) !important;
+  stroke: rgb(192, 90, 59) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(192, 90, 59) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(192, 90, 59) !important;
+}
+
+.shop-img {
+  max-width: 100vw;
+  height: 28rem;
+  position: relative;
+  top: 0rem;
+  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1702353102/14_Jewelry_Extra_d9ds9u.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.about-bg {
+  max-width: 100vw;
+  height: 87.4vh;
+  position: relative;
+  top: 0rem;
+  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1702578397/portrait-of-young-beautiful-woman-with-jewelry-2_comp_qlryya.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Grid style */
+.gallery-grid-parent {
+  display: grid;
+  grid-template-areas:
+    "a a b b g e e"
+    "a a d f g h h"
+    "c c k f i h h"
+    "j j k f i l l";
+}
+
+
+.grid-child-1 {
+  grid-area: a;
+}
+.grid-child-2 {
+  grid-area: b;
+}
+.grid-child-3 {
+  grid-area: c;
+}
+.grid-child-4 {
+  grid-area: d;
+}
+.grid-child-5 {
+  grid-area: e;
+}
+.grid-child-6 {
+  grid-area: f;
+}
+.grid-child-7 {
+  grid-area: g;
+}
+.grid-child-8 {
+  grid-area: h;
+}
+.grid-child-9 {
+  grid-area: i;
+}
+.grid-child-10 {
+  grid-area: j;
+}
+.grid-child-11 {
+  grid-area: k;
+}
+.grid-child-12 {
+  grid-area: l;
+}
+
+.footer-bg {
+  max-width: 100vw;
+  height: 65vh;
+  position: relative;
+  top: 0rem;
+  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1701956140/bg-fter-home24_cbh9b0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media only screen and (max-width: 768px) {
+  .gallery-grid-parent {
+    grid-template-areas:
+      "a a b b"
+      "c c d d"
+      "e e f f"
+      "g g h h"
+      "i i j j"
+      "k k l l";
+  }
+}
